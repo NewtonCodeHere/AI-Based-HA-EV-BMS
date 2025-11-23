@@ -108,53 +108,54 @@ Written using HLS-synthesizable constructs
 
 🏗 High-Level Synthesis
 
-Using Xilinx Vitis HLS, the C++ model was:
+    Using Xilinx Vitis HLS, the C++ model was:
 
-Simulated
+    Simulated
 
-Optimized with HLS pragmas
+    Optimized with HLS pragmas
 
-Synthesized into RTL (Verilog/VHDL)
+    Synthesized into RTL (Verilog/VHDL)
 
-This RTL is ready for integration into:
+    This RTL is ready for integration into:
 
-Xilinx Zynq SoC
+    Xilinx Zynq SoC
 
-PYNQ-Z2 board
+    PYNQ-Z2 board
 
-Any FPGA-based BMS prototype
+    Any FPGA-based BMS prototype
 
 🧩 Current Phase (Ongoing Work)
 
-RTL verification
+    RTL verification
 
-FPGA resource utilization analysis
+    FPGA resource utilization analysis
 
-Latency & power benchmarking
+    Latency & power benchmarking
 
-Preparing system-level integration for real BMS deployment
+    Preparing system-level integration for real BMS deployment
 
 🎯 Final Goal
 
-To build a fully functional FPGA-based SoC estimation subsystem capable of:
+    To build a fully functional FPGA-based SoC estimation subsystem capable of:
 
-Real-time inference
+    Real-time inference
 
-Low latency
+    Low latency
 
-Low power consumption
+    Low power consumption
 
-High SoC prediction accuracy
+    High SoC prediction accuracy
 
-Compatibility with real EV Battery Management Systems
+    Compatibility with real EV Battery Management Systems
 
 📂 Repository Structure 
-├── dataset/                 # Panasonic data files (.mat)
-├── notebooks/               # Colab notebooks
+
+├── dataset/                 # Panasonic battery cycling data (.mat files)
+├── notebooks/               # Google Colab notebooks for LSTM training
 ├── src/
-│   ├── python_model/        # LSTM training code
-│   ├── hls_cpp/             # C++ inference code for Vitis HLS
-│   ├── headers/             # Exported weight files (.h)
-│   └── rtl/                 # Generated RTL (Verilog/VHDL)
-├── docs/                    # Reports, diagrams, explanations
-└── README.md                # Project documentation
+│   ├── python_model/        # Python scripts: preprocessing + LSTM model training
+│   ├── hls_cpp/             # C++ inference implementation for Vitis HLS
+│   ├── headers/             # Exported LSTM weights as C++ header files (.h)
+│   └── rtl/                 # Auto-generated RTL (Verilog/VHDL) from HLS
+├── docs/                    # Reports, diagrams, architecture docs, analysis
+└── README.md                # Main project documentation
